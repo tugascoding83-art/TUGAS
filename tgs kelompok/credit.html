@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="credit-page">
+    <!-- Header -->
+    <header class="balance-box">
+      <div class="avatar-left" onclick="window.location.href='avatar.html'">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-img" />
+        <div class="balance-info">
+          <span class="name">Bang Messi</span>
+          <span class="balance">Balance: $25.00</span>
+        </div>
+      </div>
+      <button class="cart-btn" onclick="window.location.href='checkout.html'">
+        🛒
+      </button>
+    </header>
+
+    <!-- Payment surface -->
+    <main class="payment-surface">
+      <h3 class="title">Payment Method</h3>
+
+      <div class="payment-stack">
+        <div class="method-item">
+          <button class="method-btn">FLIP</button>
+          <div class="method-label">Payment Method</div>
+        </div>
+        <div class="method-item">
+          <button class="method-btn">TRANSFER BANK</button>
+          <div class="method-label">Payment Method</div>
+        </div>
+        <div class="method-item">
+          <button class="method-btn">OVO</button>
+          <div class="method-label">Payment Method</div>
+        </div>
+        <div class="method-item">
+          <button class="method-btn">DANA</button>
+          <div class="method-label">Payment Method</div>
+        </div>
+      </div>
+
+      <!-- Toggle coin -->
+      <div class="coin-toggle">
+        <span>Pakai <b>120,500</b> koin agar hemat biaya admin</span>
+        <div class="toggle-switch" id="coinToggle">
+          <div class="toggle-knob"><span class="toggle-icon">−</span></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom sheet -->
+    <section class="total-sheet" id="totalSheet" aria-hidden="true">
+      <div class="sheet-inner">
+        <div class="total-title">Total Transfer</div>
+        <div class="total-amount">$1,5</div>
+        <button class="continue-btn">Continue</button>
+      </div>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="bottom-nav">
+      <button class="nav-btn" data-link="menu.html">🏠</button>
+      <button class="nav-btn" data-link="search.html">🔍</button>
+
+      <!-- Avatar pakai IMG -->
+      <button class="nav-btn" data-link="avatar.html" id="avatar-link">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-icon" />
+      </button>
+
+      <button class="nav-btn" data-link="credit.html">💳</button>
+    </nav>
+    <!-- taruh script di paling bawah -->
+    <script src="app.js"></script>
+  </body>
+</html>

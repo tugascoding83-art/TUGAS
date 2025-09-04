@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="avatar-page">
+    <!-- Avatar Header -->
+    <header class="avatar-header">
+      <div class="avatar-left" id="avatarContainer">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-img" id="avatar" />
+        <span class="avatar-name">Bang Messi</span>
+      </div>
+      <button class="cart-btn" onclick="window.location.href='checkout.html'">
+        🛒
+      </button>
+    </header>
+
+    <!-- Menu Avatar -->
+    <main class="avatar-menu">
+      <button class="menu-btn" onclick="window.location.href='massage.html'">
+        <span>📩 Message</span>
+        <span class="badge">46</span>
+      </button>
+
+      <button
+        class="menu-btn"
+        onclick="window.location.href='notification.html'"
+      >
+        <span>🔔 Notification</span>
+        <span class="badge">11</span>
+      </button>
+
+      <button class="menu-btn" onclick="window.location.href='account.html'">
+        <span>👤 Account Details</span>
+      </button>
+
+      <button class="menu-btn" onclick="window.location.href='checkout.html'">
+        <span>🛒 My Purchase</span>
+      </button>
+
+      <button class="menu-btn" onclick="window.location.href='setting.html'">
+        <span>⚙️ Settings</span>
+      </button>
+    </main>
+
+    <!-- Bottom Navbar -->
+    <nav class="bottom-nav">
+      <button class="nav-btn" onclick="window.location.href='menu.html'">
+        🏠
+      </button>
+      <button class="nav-btn" onclick="window.location.href='search.html'">
+        🛍️
+      </button>
+      <button class="nav-btn" onclick="window.location.href='avatar.html'">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-icon" />
+      </button>
+      <button class="nav-btn" onclick="window.location.href='credit.html'">
+        💳
+      </button>
+    </nav>
+
+    <!-- Modal Avatar -->
+    <div class="modal" id="avatarModal">
+      <span class="modal-close" id="closeModal">&times;</span>
+      <img id="avatarPreview" src="" />
+    </div>
+
+    <script>
+      // Avatar modal
+      const avatar = document.getElementById("avatar");
+      const modal = document.getElementById("avatarModal");
+      const modalImg = document.getElementById("avatarPreview");
+      const closeModal = document.getElementById("closeModal");
+
+      avatar.onclick = function () {
+        modal.style.display = "flex";
+        modalImg.src = avatar.src;
+      };
+
+      closeModal.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      modal.onclick = function (e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desain Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="header">
+        <div class="header-content">
+          <img
+            src="img/avatar4.jpg"
+            alt="User Avatar"
+            class="avatar"
+            id="avatar"
+          />
+          <span>Adek Perempuan</span>
+        </div>
+        <a href="massage.html" class="btn-back">&lt;</a>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="message received">
+          Halo... saya sudah terima kacamata yaa 😁
+        </div>
+        <div class="message received">
+          Terima kasih toko... kirimnya cepat, saya suka ini 🙏
+        </div>
+        <div class="message received">
+          Kualitas bagus, warna sama foto ya… saya suka
+        </div>
+        <div class="message received">
+          Saya baru coba… enak di mata, ringan juga
+        </div>
+        <div class="message received">
+          Saya mau tanya… kalau ada model lain, bisa kasih saya link
+        </div>
+        <div class="message received">
+          Teman saya lihat juga, dia bilang mau beli nanti"
+        </div>
+        <div class="message received">
+          Saya simpan kontak toko ya… nanti saya beli lagi
+        </div>
+        <div class="message received">
+          Oke makasih yaa… saya pakai sekarang, pas banget 😊
+        </div>
+      </div>
+
+      <form class="input-container" id="chat-form" autocomplete="off">
+        <input type="text" id="chat-input" placeholder="Kirim pesan..." />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Modal Avatar -->
+    <div class="modal" id="avatarModal">
+      <span class="modal-close" id="closeModal">&times;</span>
+      <img id="avatarPreview" src="" />
+    </div>
+
+    <!-- JS Langsung di HTML -->
+    <script>
+      // Chat form
+      const form = document.getElementById("chat-form");
+      const input = document.getElementById("chat-input");
+      const messages = document.getElementById("messages");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (text) {
+          const div = document.createElement("div");
+          div.className = "message sent";
+          div.textContent = text;
+          messages.appendChild(div);
+          messages.scrollTop = messages.scrollHeight;
+          input.value = "";
+        }
+      });
+
+      // Avatar modal
+      const avatar = document.getElementById("avatar");
+      const modal = document.getElementById("avatarModal");
+      const modalImg = document.getElementById("avatarPreview");
+      const closeModal = document.getElementById("closeModal");
+
+      avatar.onclick = function () {
+        modal.style.display = "flex";
+        modalImg.src = avatar.src;
+      };
+
+      closeModal.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      modal.onclick = function (e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

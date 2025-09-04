@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="profile-page">
+    <!-- Header -->
+    <div class="header-bar">
+      <a href="setting.html" class="back-btn">←</a>
+      <h1>Profile</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="profile-container">
+      <!-- Foto Profil -->
+      <div class="profile-photo">
+        <img src="img/avatar.jpg" alt="Profile Photo" id="profileAvatar" />
+        <div class="change-photo">Change Photo</div>
+      </div>
+
+      <!-- Data Profile -->
+      <div class="profile-item">
+        <span>Name</span>
+        <a href="#" class="arrow">›</a>
+      </div>
+      <div class="profile-item">
+        <span>Gender</span>
+        <a href="#" class="arrow">›</a>
+      </div>
+      <div class="profile-item">
+        <span>Bio</span>
+        <a href="#" class="arrow">›</a>
+      </div>
+    </div>
+
+    <!-- Modal Zoom Foto -->
+    <div class="modal" id="profileModal">
+      <span class="modal-close" id="closeProfileModal">&times;</span>
+      <img id="profileModalImg" src="" alt="Zoomed Profile" />
+    </div>
+
+    <script>
+      // Modal Foto Profil
+      const profileAvatar = document.getElementById("profileAvatar");
+      const profileModal = document.getElementById("profileModal");
+      const profileModalImg = document.getElementById("profileModalImg");
+      const closeProfileModal = document.getElementById("closeProfileModal");
+
+      profileAvatar.onclick = () => {
+        profileModal.style.display = "flex";
+        profileModalImg.src = profileAvatar.src;
+      };
+
+      closeProfileModal.onclick = () => {
+        profileModal.style.display = "none";
+      };
+
+      profileModal.onclick = (e) => {
+        if (e.target === profileModal) {
+          profileModal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
