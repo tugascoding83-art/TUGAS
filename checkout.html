@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="checkout-page">
+    <!-- Avatar Header -->
+    <header class="avatar-header">
+      <div class="avatar-left" onclick="window.location.href='avatar.html'">
+        <img src="img/avatar.jpg" alt="Avatar" class="header-avatar" />
+        <h2>Shoping chat</h2>
+      </div>
+    </header>
+
+    <!-- Total Header -->
+    <div class="total-header">
+      <strong>Total :</strong> <span id="total">$0</span>
+    </div>
+
+    <!-- Product List -->
+    <main class="product-list">
+      <div class="product-card" data-price="124">
+        <img src="img/sneakers.jpeg" alt="Sneakers" />
+        <span class="product-name">Sneakers</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="124">
+        <img src="img/bag.jpeg" alt="Bag" />
+        <span class="product-name">Bag</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="124">
+        <img src="img/heels1.jpeg" alt="Heels" />
+        <span class="product-name">Heels</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="124">
+        <img src="img/fashion2.jpeg" alt="T-shirt" />
+        <span class="product-name">T-shirt</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Checkout Button -->
+    <div class="checkout-footer">
+      <button class="checkout-btn" data-link="barang.html">Checkout</button>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn" data-link="menu.html">🏠</button>
+      <button class="nav-btn" data-link="search.html">🔍</button>
+
+      <!-- Avatar pakai IMG -->
+      <button class="nav-btn" data-link="avatar.html" id="avatar-link">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-icon" />
+      </button>
+
+      <button class="nav-btn" data-link="credit.html">💳</button>
+    </nav>
+
+    <!-- External JS -->
+    <script src="app.js"></script>
+  </body>
+</html>

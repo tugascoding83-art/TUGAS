@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="menu-page">
+      <!-- Panggil header di sini -->
+      <!-- Avatar Header -->
+    <header class="avatar-header">
+      <div class="avatar-left" onclick="window.location.href='avatar.html'">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-img" />
+        <span class="avatar-name">Bang Messi</span>
+      </div>
+      <button class="cart-btn" onclick="window.location.href='checkout.html'">
+        🛒
+      </button>
+    </header>
+    
+    </body>
+
+    <main class="menu-content">
+      <div class="product-grid">
+        <!-- Contoh 6 gambar produk -->
+        <div class="product-item">
+          <img src="img/makeup.jpeg" alt="Makeup" />
+          <p><b>Makeup</b></p>
+          <button class="buy-btn" data-link="makeup.html">Buy</button>
+        </div>
+        <div class="product-item">
+          <img src="img/jacket.jpeg" alt="Jacket" />
+          <p><b>Jacket</b></p>
+          <button class="buy-btn" data-link="jacket.html">Buy</button>
+        </div>
+        <div class="product-item">
+          <img src="img/sneakers.jpeg" alt="Sneakers" />
+          <p><b>Sneakers</b></p>
+          <button class="buy-btn" data-link="sneakers.html">Buy</button>
+        </div>
+        <div class="product-item">
+          <img src="img/hag.jpeg" alt="Hat" />
+          <p><b>Hat</b></p>
+          <button class="buy-btn" data-link="hat.html">Buy</button>
+        </div>
+        <div class="product-item">
+          <img src="img/parfum.jpeg" alt="Parfum" />
+          <p><b>Parfum</b></p>
+          <button class="buy-btn" data-link="parfum.html">Buy</button>
+        </div>
+        <div class="product-item">
+          <img src="img/bag.jpeg" alt="Bag" />
+          <p><b>Bag</b></p>
+          <button class="buy-btn" data-link="bag.html">Buy</button>
+        </div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+  <button class="nav-btn" data-link="menu.html">🏠</button>
+  <button class="nav-btn" data-link="search.html">🔍</button>
+  
+  <!-- Avatar pakai IMG -->
+  <button class="nav-btn" data-link="avatar.html" id="avatar-link">
+    <img src="img/avatar.jpg" alt="Avatar" class="avatar-icon">
+  </button>
+  
+  <button class="nav-btn" data-link="credit.html">💳</button>
+</nav>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>

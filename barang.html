@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="cart-page">
+    <!-- Header -->
+    <header class="cart-header">
+      <div class="avatar-left" onclick="window.location.href='avatar.html'">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-img" />
+      </div>
+      <h1>Shopping Cart</h1>
+    </header>
+
+    <!-- Address Section -->
+    <section class="cart-address">
+      <label for="address">Address :</label>
+      <textarea id="address" placeholder="Enter your address"></textarea>
+    </section>
+
+    <div class="order-status">
+      Waiting For Payment → Paid Off → Processing → In delivery → Accepted
+    </div>
+
+    <!-- Product List -->
+    <main class="product-list">
+      <div class="product-card" data-price="124">
+        <img src="img/bag.jpeg" alt="Bag" />
+        <span class="product-name">Bag</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="124">
+        <img src="img/heels1.jpeg" alt="Heels" />
+        <span class="product-name">Heels</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="124">
+        <img src="img/fashion2.jpeg" alt="T-shirt" />
+        <span class="product-name">T-shirt</span>
+        <div class="quantity-control">
+          <button class="minus">−</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn" data-link="menu.html">🏠</button>
+      <button class="nav-btn" data-link="search.html">🔍</button>
+
+      <!-- Avatar pakai IMG -->
+      <button class="nav-btn" data-link="avatar.html" id="avatar-link">
+        <img src="img/avatar.jpg" alt="Avatar" class="avatar-icon" />
+      </button>
+
+      <button class="nav-btn" data-link="credit.html">💳</button>
+    </nav>
+
+    <div class="total-header">
+      <p><strong>Balance :</strong> <span id="total"></span></p>
+    </div>
+    <div class="total-header">
+      <p><strong>Payment Via :</strong> <span id="total"></span></p>
+    </div>
+
+    <script>
+      document.querySelectorAll(".item").forEach(function (item) {
+        const minusBtn = item.querySelector(".quantity button:first-child");
+        const plusBtn = item.querySelector(".quantity button:last-child");
+        const qtySpan = item.querySelector(".quantity span");
+
+        minusBtn.addEventListener("click", function () {
+          let qty = parseInt(qtySpan.textContent);
+          if (qty > 1) qtySpan.textContent = qty - 1;
+        });
+
+        plusBtn.addEventListener("click", function () {
+          let qty = parseInt(qtySpan.textContent);
+          qtySpan.textContent = qty + 1;
+        });
+      });
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
